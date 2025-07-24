@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import axios from "axios";
 import "./App.css";
@@ -17,8 +18,7 @@ function App() {
     setIsLoading(true);
     setError(null);
     
-    axios
-      .get(`https://api.github.com/users/${username}`)
+    axios.get(`https://api.github.com/users/${username}`)
       .then((res) => {
         setUser(res.data);
         setIsLoading(false);
