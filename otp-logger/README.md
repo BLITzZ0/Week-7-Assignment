@@ -1,12 +1,4 @@
-# React + Vite
+# React OTP Logger
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project is a front-end demonstration of OTP (One-Time Password) generation and verification using React. It allows users to enter a mobile number and generates a random 4-digit OTP, which is logged to the browser console for simulation purposes. The reason for using `console.log` is to simulate sending an OTP without integrating real SMS services — making it easier to test and understand the flow without backend dependencies or phone verification costs. The user can enter the OTP using four separate input boxes, with automatic focus movement and backspace support. This is strictly a demo project, and all OTP logic is handled on the client side for educational and testing purposes only.
