@@ -1,0 +1,266 @@
+/* ================ */
+/* Variables & Reset */
+/* ================ */
+:root {
+  --primary-color: #24292e;
+  --secondary-color: #0366d6;
+  --secondary-hover: #0356b6;
+  --light-gray: #f6f8fa;
+  --medium-gray: #e1e4e8;
+  --dark-gray: #586069;
+  --white: #ffffff;
+  --error-color: #d73a49;
+  --disabled-color: #9a9a9a;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
+               Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: var(--primary-color);
+  background-color: var(--light-gray);
+}
+
+/* ============= */
+/* App Container */
+/* ============= */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-title {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+/* ============== */
+/* Search Section */
+/* ============== */
+.search-container {
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto 2rem;
+  gap: 0.5rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--medium-gray);
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.2);
+}
+
+.search-button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.search-button:hover {
+  background-color: var(--secondary-hover);
+}
+
+.search-button:disabled {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+/* ============= */
+/* Results Panel */
+/* ============= */
+.result-container {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ============ */
+/* Profile Card */
+/* ============ */
+.profile-card {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  transition: var(--transition);
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-header {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--white);
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.profile-header h2 {
+  margin: 0.5rem 0;
+  color: var(--primary-color);
+}
+
+.profile-header p {
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+}
+
+.profile-details {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.profile-bio {
+  margin: 1rem 0;
+  padding: 0.8rem;
+  background-color: var(--light-gray);
+  border-radius: 6px;
+  font-style: italic;
+}
+
+/* =========== */
+/* Stats Cards */
+/* =========== */
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  gap: 0.5rem;
+}
+
+.stat-box {
+  flex: 1;
+  padding: 0.8rem;
+  background-color: var(--light-gray);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--dark-gray);
+}
+
+/* =========== */
+/* Profile Link */
+/* =========== */
+.profile-link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.profile-link:hover {
+  background-color: var(--secondary-hover);
+}
+
+/* ============= */
+/* Loading State */
+/* ============= */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--secondary-color);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============ */
+/* Error States */
+/* ============ */
+.error-message {
+  color: var(--error-color);
+  margin-bottom: 1rem;
+}
+
+.not-found {
+  color: var(--error-color);
+  font-size: 1.1rem;
+}
+
+/* ================ */
+/* Responsive Design */
+/* ================ */
+@media (max-width: 600px) {
+  .app-container {
+    padding: 1rem;
+  }
+  
+  .app-title {
+    font-size: 2rem;
+  }
+  
+  .stats-container {
+    flex-direction: column;
+  }
+  
+  .search-container {
+    flex-direction: column;
+  }
+  
+  .search-button {
+    width: 100%;
+  }
+}
